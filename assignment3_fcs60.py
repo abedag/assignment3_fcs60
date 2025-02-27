@@ -19,3 +19,7 @@ class Car(Vehicle):
         Vehicle.__init__(brand, model, year, daily_rental_price)
         self.seating_capacity = seating_capacity
 
+    def display_info(self):
+        print(f"Car: {self.brand} {self.model}, Year: {self.year}, Seats: {self.seating_capacity} Daily Rental Price: {self._daily_rental_price}")
+
+
