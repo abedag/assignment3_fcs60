@@ -11,4 +11,7 @@ class Vehicle:
 def display_info(self):
     print(f"Vehicle: {self.brand} {self.model}, Year: {self.year}, Daily Rental Price: {self._daily_rental_price}")
 
+def calculate_rental_cost(self, days):
+    return self._daily_rental_price * days
+
 
