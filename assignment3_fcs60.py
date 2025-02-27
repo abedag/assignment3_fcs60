@@ -9,7 +9,7 @@ class Vehicle:
 
     
     def display_info(self):
-        print(f"Vehicle: {self.brand} {self.model}, Year: {self.year}, Daily Rental Price: {self._daily_rental_price}")
+        print(f"Vehicle: {self.brand} {self.model}, Year: {self.year}, Daily Rental Price: {self._daily_rental_price}$")
 
     def calculate_rental_cost(self, days):
         return self._daily_rental_price * days
@@ -27,7 +27,7 @@ class Car(Vehicle):
         self.seating_capacity = seating_capacity
 
     def display_info(self):
-        print(f"Car: {self.brand} {self.model}, Year: {self.year}, Seats: {self.seating_capacity} Daily Rental Price: {self._daily_rental_price}")
+        print(f"Car: {self.brand} {self.model}, Year: {self.year}, Seats: {self.seating_capacity} Daily Rental Price: {self._daily_rental_price}$")
 
 
 class Bike(Vehicle):
@@ -36,7 +36,7 @@ class Bike(Vehicle):
         self.engine_capacity = engine_capacity
 
     def display_info(self):
-        print(f"Bike: {self.brand} {self.model}, Year: {self.year}, Seats: {self.engine_capacity} Daily Rental Price: {self._daily_rental_price}")
+        print(f"Bike: {self.brand} {self.model}, Year: {self.year}, Seats: {self.engine_capacity} Daily Rental Price: {self._daily_rental_price}$")
 
 def show_vehicle_info(vehicle):
     vehicle.display_info()
@@ -51,8 +51,9 @@ show_vehicle_info(b)
 c_rental_cost = c.calculate_rental_cost(15)
 b_rental_cost = b.calculate_rental_cost(30)
 
-print(f"Rental cost for {c.brand} {c.model} for 15 days: ${c_rental_cost}")  
-print(f"Rental cost for {b.brand} {b.model} for 30 days: ${b_rental_cost}")
+print(f"Rental cost for {c.brand} {c.model} for 15 days: {c_rental_cost}$")  
+print(f"Rental cost for {b.brand} {b.model} for 30 days: {b_rental_cost}$")
 
-c.set_rental_price(120)
+c_new_rent = c.set_rental_price(120)
 
+print(f"The updated daily rental cost is {c_new_rent}$")
