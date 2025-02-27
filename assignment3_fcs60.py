@@ -47,3 +47,7 @@ b = Bike("BMW", "S1000RR", 2022, "999cc", 50)
 
 show_vehicle_info(c)
 show_vehicle_info(b)
+
+c_rental_cost = c.calculate_rental_cost(15)
+b_rental_cost = b.calculate_rental_cost(30)
+
