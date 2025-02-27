@@ -51,3 +51,6 @@ show_vehicle_info(b)
 c_rental_cost = c.calculate_rental_cost(15)
 b_rental_cost = b.calculate_rental_cost(30)
 
+print(f"Rental cost for {c.brand} {c.model} for 15 days: ${c_rental_cost}")  
+print(f"Rental cost for {b.brand} {b.model} for 30 days: ${b_rental_cost}")
+
