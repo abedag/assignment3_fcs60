@@ -23,7 +23,7 @@ class Vehicle:
 
 class Car(Vehicle):
     def __init__(self, brand, model, year, seating_capacity, daily_rental_price):
-        Vehicle.__init__(brand, model, year, daily_rental_price)
+        Vehicle.__init__(self ,brand, model, year, daily_rental_price)
         self.seating_capacity = seating_capacity
 
     def display_info(self):
@@ -32,7 +32,7 @@ class Car(Vehicle):
 
 class Bike(Vehicle):
     def __init__(self, brand, model, year, engine_capacity, daily_rental_price):
-        Vehicle.__init__(brand, model, year, daily_rental_price)
+        Vehicle.__init__(self, brand, model, year, daily_rental_price)
         self.engine_capacity = engine_capacity
 
     def display_info(self):
