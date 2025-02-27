@@ -37,3 +37,6 @@ class Bike(Vehicle):
 
     def display_info(self):
         print(f"Bike: {self.brand} {self.model}, Year: {self.year}, Seats: {self.engine_capacity} Daily Rental Price: {self._daily_rental_price}")
+
+def show_vehicle_info(vehicle):
+    vehicle.display_info()
