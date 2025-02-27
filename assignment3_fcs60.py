@@ -45,3 +45,5 @@ def show_vehicle_info(vehicle):
 c = Car("BMW", "M5 CS", 2024, 5, 100)
 b = Bike("BMW", "S1000RR", 2022, "999cc", 50)
 
+show_vehicle_info(c)
+show_vehicle_info(b)
