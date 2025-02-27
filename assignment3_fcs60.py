@@ -17,7 +17,9 @@ class Vehicle:
     def get_rental_price(self):
         return self._daily_rental_price
     
-    
+    def set_rental_price(self, final_price):
+        self._daily_rental_price = final_price
+
 
 class Car(Vehicle):
     def __init__(self, brand, model, year, seating_capacity, daily_rental_price):
@@ -26,6 +28,7 @@ class Car(Vehicle):
 
     def display_info(self):
         print(f"Car: {self.brand} {self.model}, Year: {self.year}, Seats: {self.seating_capacity} Daily Rental Price: {self._daily_rental_price}")
+
 
 class Bike(Vehicle):
     def __init__(self, brand, model, year, engine_capacity, daily_rental_price):
