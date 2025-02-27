@@ -26,3 +26,6 @@ class Bike(Vehicle):
     def __init__(self, brand, model, year, engine_capacity, daily_rental_price):
         Vehicle.__init__(brand, model, year, daily_rental_price)
         self.engine_capacity = engine_capacity
+
+    def display_info(self):
+        print(f"Bike: {self.brand} {self.model}, Year: {self.year}, Seats: {self.engine_capacity} Daily Rental Price: {self._daily_rental_price}")
