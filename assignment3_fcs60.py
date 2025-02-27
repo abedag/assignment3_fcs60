@@ -40,3 +40,8 @@ class Bike(Vehicle):
 
 def show_vehicle_info(vehicle):
     vehicle.display_info()
+
+
+c = Car("BMW", "M5 CS", 2024, 5, 100)
+b = Bike("BMW", "S1000RR", 2022, "999cc", 50)
+
