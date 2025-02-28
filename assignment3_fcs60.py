@@ -5,20 +5,20 @@ class Vehicle:
         self.brand = brand
         self.model = model
         self.year = year
-        self._daily_rental_price = daily_rental_price
+        self.__daily_rental_price = daily_rental_price
 
     
     def display_info(self):
-        print(f"Vehicle: {self.brand} {self.model}, Year: {self.year}, Daily Rental Price: {self._daily_rental_price}$")
+        print(f"Vehicle: {self.brand} {self.model}, Year: {self.year}, Daily Rental Price: {self.__daily_rental_price}$")
 
     def calculate_rental_cost(self, days):
-        return self._daily_rental_price * days
+        return self.__daily_rental_price * days
     
     def get_rental_price(self):
-        return self._daily_rental_price
+        return self.__daily_rental_price
     
     def set_rental_price(self, final_price):
-        self._daily_rental_price = final_price
+        self.__daily_rental_price = final_price
 
 
 class Car(Vehicle):
@@ -27,7 +27,7 @@ class Car(Vehicle):
         self.seating_capacity = seating_capacity
 
     def display_info(self):
-        print(f"Car: {self.brand} {self.model}, Year: {self.year}, Seats: {self.seating_capacity} Daily Rental Price: {self._daily_rental_price}$")
+        print(f"Car: {self.brand} {self.model}, Year: {self.year}, Seats: {self.seating_capacity} Daily Rental Price: {self.get_rental_price()}$")
 
 
 class Bike(Vehicle):
@@ -36,7 +36,7 @@ class Bike(Vehicle):
         self.engine_capacity = engine_capacity
 
     def display_info(self):
-        print(f"Bike: {self.brand} {self.model}, Year: {self.year}, Seats: {self.engine_capacity} Daily Rental Price: {self._daily_rental_price}$")
+        print(f"Bike: {self.brand} {self.model}, Year: {self.year}, Seats: {self.engine_capacity} Daily Rental Price: {self.get_rental_price()}$")
 
 def show_vehicle_info(vehicle):
     vehicle.display_info()
@@ -54,6 +54,7 @@ b_rental_cost = b.calculate_rental_cost(30)
 print(f"Rental cost for {c.brand} {c.model} for 15 days: {c_rental_cost}$")  
 print(f"Rental cost for {b.brand} {b.model} for 30 days: {b_rental_cost}$")
 
-c_new_rent = c.set_rental_price(120)
+c.set_rental_price(120)
+c_new_rent = c.get_rental_price()
 
 print(f"The updated daily rental cost is {c_new_rent}$")
